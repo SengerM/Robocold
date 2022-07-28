@@ -6,7 +6,7 @@ setuptools.setup(
 	author = "Matias Senger",
 	author_email = "m.senger@hotmail.com",
 	description = "Python interface for Robocold",
-	url = "https://github.com/SengerM/The_Castle_RF_multiplexer",
+	url = "https://github.com/SengerM/Robocold",
 	packages = setuptools.find_packages(),
 	classifiers = [
 		"Programming Language :: Python :: 3",

@@ -3,8 +3,8 @@ import time
 
 END_OF_ANSWER_SEQUENCE = b'<EndOfAnswer>'
 
-def find_The_Castle_port():
-	MY_CASTLES_SERIAL_NUMBER = '751303038353512151E0' # This is the serial number of the Arduino board which I used to build up my castle. I will probably never build another of this so I don't care hardcoding this serial number here.
+def find_Robocold_port():
+	MY_CASTLES_SERIAL_NUMBER = '' # This is the serial number of the Arduino board which I used to build up my castle. I will probably never build another of this so I don't care hardcoding this serial number here.
 	for p in serial.tools.list_ports.comports():
 		if 'arduino' in p.manufacturer.lower():
 			if p.serial_number == MY_CASTLES_SERIAL_NUMBER:
@@ -29,6 +29,9 @@ class ArduinoSerialCommander:
 		time.sleep(.1)
 		response = self.ser.read_until(END_OF_ANSWER_SEQUENCE)
 		return response.decode('ascii')[:-len(END_OF_ANSWER_SEQUENCE)]
+
+class Robocold(ArduinoSerialCommander):
+	
 
 if __name__ == '__main__':
 	print(END_OF_ANSWER_SEQUENCE)
