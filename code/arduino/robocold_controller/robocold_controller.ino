@@ -225,6 +225,7 @@ void loop() {
 		if (command_has_just_finished == true) {
 			serial_flush(); // Discard any garbage that was sent while the command was being executed.
 			command_has_just_finished = false; // Reset this variable.
+			Serial.print(END_OF_ANSWER_SEQUENCE);
 		}
 		if (digitalRead(BUTTON_MOVE_LONG_STAGE_BACKWARD_PIN_NUMBER) == LOW) {
 			long_stage.Move(STAGES_STEPS_WHEN_BUTTONS_PRESSED, BACKWARD);

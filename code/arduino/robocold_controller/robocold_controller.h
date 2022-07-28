@@ -7,6 +7,8 @@
 
 #define __VERSION__ "2"
 
+#define END_OF_ANSWER_SEQUENCE "<EndOfAnswer>"
+
 // Stuff related to the motors and stages ------------------------------
 #define LONG_STAGE_BACKWARD_END_SWITCH_PIN_NUMBER 6
 #define LONG_STAGE_FORWARD_END_SWITCH_PIN_NUMBER 5
