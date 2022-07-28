@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-	name = "robocold",
+	name = "robocoldpy",
 	version = "0",
 	author = "Matias Senger",
 	author_email = "m.senger@hotmail.com",
