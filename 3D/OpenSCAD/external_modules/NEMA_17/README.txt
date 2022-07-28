@@ -1,0 +1,1 @@
+Parametric NEMA 17 Stepper Motor by joncruz on Thingiverse: https://www.thingiverse.com/thing:4322777
