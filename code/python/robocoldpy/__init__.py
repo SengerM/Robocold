@@ -38,6 +38,10 @@ class Robocold(ArduinoSerialCommander):
 			raise RuntimeError(f'Error in Robocold while executing command `{command}`, Robocold answered `{answer}`')
 		return answer
 	
+	@property
+	def idn(self):
+		return self.query('IDN?')[:-2] # Remove the "\r\n" at the end.
+	
 	def reset(self):
 		"""Reset the position of both stages.
 		"""
